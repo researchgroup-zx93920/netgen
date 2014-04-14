@@ -1,15 +1,23 @@
-CFLAGS = -O -DDIMACS
+CC = gcc -O0
 
-OBJS = netgen.o index.o random.o
+CFLAGS = -Wall -Wextra
+
+OBJS = netgen.o index.o random.o main.o
 
 netgen: $(OBJS)
 	$(CC) -o $@ $(CFLAGS) $(OBJS)
 
-netgen.o: netgen.c netgen.h
+netgen.o: netgen.c
+	$(CC) $(CFLAGS) $^ -c
 
-index.o: index.c netgen.h
+index.o: index.c
+	$(CC) $(CFLAGS) $^ -c
 
 random.o: random.c
+	$(CC) $(CFLAGS) $^ -c
+
+main.o: main.c
+	$(CC) $(CFLAGS) $^ -c
 
 clean:
 	rm *.o
