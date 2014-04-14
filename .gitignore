@@ -2,4 +2,4 @@
 *.o
 
 # Ignore bin
-./bin/
+bin/
