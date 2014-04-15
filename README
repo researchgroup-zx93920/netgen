@@ -1,0 +1,19 @@
+The following changes have been made:
+* Declarations and definitions have been separated between severel header files,
+  each one is an individual interface that can be used alone. The new files are
+  random.h, where declarations for the portable random generator are made, 
+  index.h, the interface for the index lists. The header netgen.h has also been
+  repurposed to conform to a more modern style.
+* The files random.c, index.c and netgen.c have been refactored using better
+  identation (there were identation issues previously), brackets have been used
+  to clarify some parts of the source code.
+* The file netgen.h no longer holds the main function of the NETGEN C generator.
+  The rationale behind this decision is to allow the usage of netgen as an
+  interface that can be adapted. The main function is located in the file named
+  main.c, that holds only the main function and several macros to make it easy
+  to perform some actions.
+
+NO CHANGES HAVE BEEN MADE TO THE SOURCE CODE STRUCTURE: THE NETGEN GENERATOR
+WORKS AND GENERATES THE NETWORKS IN EXACTLY THE SAME MANNER AS IN THE ORIGINAL
+SOURCE CODE. THE PURPOSE OF THE CHANGES MADE IS JUST TO ELIMINATE SOME
+UNNECESSARY OBSCURITY IN THE ORIGINAL SOURCE CODE.
