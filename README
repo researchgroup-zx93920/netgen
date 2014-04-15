@@ -12,8 +12,20 @@ The following changes have been made:
   interface that can be adapted. The main function is located in the file named
   main.c, that holds only the main function and several macros to make it easy
   to perform some actions.
+* Added two directories bin/ and src/. The bin/ is where the generator is put
+  by the makefile. The src/ is where all source code is stored. At the root
+  directory we now have just the bin/ and src/ directories, the makefile and
+  this README.
 
 NO CHANGES HAVE BEEN MADE TO THE SOURCE CODE STRUCTURE: THE NETGEN GENERATOR
 WORKS AND GENERATES THE NETWORKS IN EXACTLY THE SAME MANNER AS IN THE ORIGINAL
 SOURCE CODE. THE PURPOSE OF THE CHANGES MADE IS JUST TO ELIMINATE SOME
 UNNECESSARY OBSCURITY IN THE ORIGINAL SOURCE CODE.
+
+NOTE: The compilation of the file netgen.c produces a lot of warnings with the
+current flags set for gcc (-Wall -Wextra). All these warnings are about the
+several comparisons between signed and unsigned integer variables. As of now, 
+no problem has been found that can damage the overall functionality of the
+generator. If needed, remove the flags from the makefile. In the future I may
+(given I have the time) correct some of these warnings, always without messing
+with the overall code structure.

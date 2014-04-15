@@ -1,22 +1,26 @@
-CC = gcc -O0
+CC := gcc -O0
 
-CFLAGS = -Wall -Wextra
+CFLAGS := -Wall -Wextra
 
-OBJS = netgen.o index.o random.o main.o
+OBJS := netgen.o index.o random.o main.o
+TARGET := ./bin/netgen
 
-netgen: $(OBJS)
-	$(CC) -o $@ $(CFLAGS) $(OBJS)
+$(TARGET): $(OBJS)
+	@echo "Linking... "
+	$(CC) $^ -o $@ $(CFLAGS)
+	@echo "Cleaning..."
+	rm *.o
 
-netgen.o: netgen.c
+netgen.o: src/netgen.c
 	$(CC) $(CFLAGS) $^ -c
 
-index.o: index.c
+index.o: src/index.c
 	$(CC) $(CFLAGS) $^ -c
 
-random.o: random.c
+random.o: src/random.c
 	$(CC) $(CFLAGS) $^ -c
 
-main.o: main.c
+main.o: src/main.c
 	$(CC) $(CFLAGS) $^ -c
 
 clean:
