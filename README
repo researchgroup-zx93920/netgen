@@ -29,3 +29,9 @@ no problem has been found that can damage the overall functionality of the
 generator. If needed, remove the flags from the makefile. In the future I may
 (given I have the time) correct some of these warnings, always without messing
 with the overall code structure.
+
+
+# INSTRUCTION for Installation >>
+
+mkdir bin
+make
