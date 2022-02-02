@@ -1,3 +1,17 @@
+# NETGEN 
+
+This is a benchmark instance generator for usual graph problems written in C. The graph generation metholody used follows 
+Klingman, Napier and Stutz's methodology as proposed in their paper - [Linked](https://pubsonline.informs.org/doi/10.1287/mnsc.20.5.814)
+
+```
+NETGEN: A Program for Generating Large Scale Capacitated Assignment, Transportation, and Minimum Cost Flow Network Problems
+D. Klingman, A. Napier, J. Stutz
+Published Online:1 
+Jan 1974
+https://doi.org/10.1287/mnsc.20.5.814
+```
+
+
 The following changes have been made:
 * Declarations and definitions have been separated between severel header files,
   each one is an individual interface that can be used alone. The new files are
