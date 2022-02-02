@@ -45,7 +45,12 @@ generator. If needed, remove the flags from the makefile. In the future I may
 with the overall code structure.
 
 
-# INSTRUCTION for Installation >>
+## Installation
+```
+$ mkdir bin
+$ make
+```
+## Additional Comment
 
-mkdir bin
-make
+Netgen used as a benchmarking instance generator in the coin-OR's library [Lemon Graph](https://linkinghub.elsevier.com/retrieve/pii/S1571066111000740)
+
